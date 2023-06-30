@@ -1,5 +1,6 @@
 ﻿using ContactsAPI.Data;
 using ContactsAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -41,6 +42,7 @@ namespace ContactsAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddContact(AddContactRequest addContactRequest)
         {
             var contact = new Contact()
