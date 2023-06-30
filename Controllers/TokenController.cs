@@ -31,7 +31,7 @@ namespace ContactsAPI.Controllers
             IActionResult response = Unauthorized();
             if (user != null)
             {
-                if (user.Name.Equals("rohitkdulani@gmail.com") && user.Password.Equals("Password"))
+                if (user.Name.Equals("rohitkdulani@gmail.com") &&  user.Password.Equals("Password"))
                 {
                     var issuer = configuration["Jwt:Issuer"];
                     var audience = configuration["Jwt:Audience"];
